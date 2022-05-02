@@ -1,0 +1,112 @@
+[
+  {
+    "car": {
+      "make": "BMW",
+      "model": "M6 E63",
+      "travelledDistance": 92235807
+    },
+    "customerName": "Zada Attwood",
+    "discount": 0.15,
+    "price": 4162.88,
+    "priceWithDiscount": 3538.4480
+  },
+  {
+    "car": {
+      "make": "Seat",
+      "model": "Toledo",
+      "travelledDistance": 21483647
+    },
+    "customerName": "Cinthia Lasala",
+    "discount": 0.55,
+    "price": 364.31,
+    "priceWithDiscount": 163.9395
+  },
+  {
+    "car": {
+      "make": "Renault",
+      "model": "Duster",
+      "travelledDistance": 922337203685807
+    },
+    "customerName": "Johnette Derryberry",
+    "discount": 0.45,
+    "price": 3307.38,
+    "priceWithDiscount": 1819.0590
+  },
+  {
+    "car": {
+      "make": "Seat",
+      "model": "Mii",
+      "travelledDistance": 21447
+    },
+    "customerName": "Yvonne Mccalla",
+    "discount": 0.45,
+    "price": 653.26,
+    "priceWithDiscount": 359.2930
+  },
+  {
+    "car": {
+      "make": "Opel",
+      "model": "Corsa",
+      "travelledDistance": 21474847
+    },
+    "customerName": "Sylvie Mcelravy",
+    "discount": 0.0,
+    "price": 388.46,
+    "priceWithDiscount": 388.460
+  },
+  {
+    "car": {
+      "make": "Ferrari",
+      "model": "250 GTO",
+      "travelledDistance": 213647
+    },
+    "customerName": "Teddy Hobby",
+    "discount": 0.2,
+    "price": 2031.97,
+    "priceWithDiscount": 1625.576
+  },
+  {
+    "car": {
+      "make": "Lamborghini",
+      "model": "Murciélago",
+      "travelledDistance": 2143647
+    },
+    "customerName": "Hai Everton",
+    "discount": 0.45,
+    "price": 429.05,
+    "priceWithDiscount": 235.9775
+  },
+  {
+    "car": {
+      "make": "Chevy",
+      "model": "Camaro",
+      "travelledDistance": 2147483647
+    },
+    "customerName": "Cinthia Lasala",
+    "discount": 0.2,
+    "price": 416.39,
+    "priceWithDiscount": 333.112
+  },
+  {
+    "car": {
+      "make": "Ford",
+      "model": "Fiesta",
+      "travelledDistance": 214647
+    },
+    "customerName": "Hipolito Lamoreaux",
+    "discount": 0.45,
+    "price": 663.96,
+    "priceWithDiscount": 365.1780
+  },
+  {
+    "car": {
+      "make": "Citroen",
+      "model": "C4",
+      "travelledDistance": 2147487
+    },
+    "customerName": "Cinthia Lasala",
+    "discount": 0.25,
+    "price": 322.08,
+    "priceWithDiscount": 241.5600
+  }
+]

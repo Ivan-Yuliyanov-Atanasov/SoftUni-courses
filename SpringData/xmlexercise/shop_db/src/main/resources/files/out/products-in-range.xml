@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<products>
+    <product name="TRAMADOL HYDROCHLORIDE" price="516.48" seller="Jacqueline Perez"/>
+    <product name="Extra Strength Pain Reliever PM" price="542.72" seller="Doris Cook"/>
+    <product name="Propranolol Hydrochloride" price="546.95" seller="Nicole Martinez"/>
+    <product name="Agaricus Equisetum Special Order" price="585.93" seller="Nicole Martinez"/>
+    <product name="AVANDAMET" price="632.08" seller="Fred Allen"/>
+    <product name="Ampicillin" price="674.63" seller="Christina Patterson"/>
+    <product name="PRIMAXIN" price="686.66" seller="Benjamin Henry"/>
+    <product name="Prostate" price="716.05" seller="Ann Stevens"/>
+    <product name="Aquafresh" price="849.93" seller="Fox"/>
+    <product name="RESCRIPTOR" price="850.52" seller="Carl Daniels"/>
+    <product name="Moore Medical Sinus Pain and Pressure Relief" price="855.39" seller="Jacqueline Perez"/>
+    <product name="Aspirin" price="925.45" seller="Ann Stevens"/>
+    <product name="Ranitidine" price="926.64" seller="Chris Mitchell"/>
+    <product name="Spironolactone" price="933.69" seller="Thomas Snyder"/>
+    <product name="pain relief" price="938.23" seller="Amanda Frazier"/>
+    <product name="Glipizide and Metformin Hydrochloride" price="953.60" seller="Emily Parker"/>
+</products>

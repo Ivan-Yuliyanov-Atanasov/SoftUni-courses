@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<customers>
+    <customers full-name="Johnette Derryberry" bought-cars="2" spent-money="8192.15"/>
+    <customers full-name="Zada Attwood" bought-cars="1" spent-money="6044.43"/>
+    <customers full-name="Oren Perlman" bought-cars="1" spent-money="5903.59"/>
+    <customers full-name="Cinthia Lasala" bought-cars="1" spent-money="2827.88"/>
+    <customers full-name="Jimmy Grossi" bought-cars="1" spent-money="2612.16"/>
+    <customers full-name="Sylvie Mcelravy" bought-cars="1" spent-money="2612.16"/>
+    <customers full-name="Rema Revelle" bought-cars="1" spent-money="1280.60"/>
+    <customers full-name="Kristian Engberg" bought-cars="1" spent-money="1135.10"/>
+    <customers full-name="Carri Knapik" bought-cars="1" spent-money="1049.51"/>
+</customers>

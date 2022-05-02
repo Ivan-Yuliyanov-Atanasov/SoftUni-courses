@@ -1,0 +1,11 @@
+package com.example.xmlcardealer.repository;
+
+import com.example.xmlcardealer.model.entity.Car;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface CarRepository extends JpaRepository<Car, Long> {
+
+    List<Car> findByMakeOrderByModelAscTravelledDistanceDesc(String make);
+}
