@@ -1,0 +1,314 @@
+
+1ва задача
+CREATE TABLE `minions`(
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  `age` INT NULL,
+  PRIMARY KEY (`id`));
+  
+ CREATE TABLE `towns` (
+  `town_id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`town_id`));
+  
+2ра задача
+
+ALTER TABLE `minions`
+ADD COLUMN `town_id` INT NOT NULL;
+
+ALTER TABLE `minions`
+  ADD CONSTRAINT `fk_town_id`
+  FOREIGN KEY (`town_id`)
+  REFERENCES `towns` (`id`);
+  
+3та задача
+
+INSERT INTO `towns`
+	(`id`,`name`)
+VALUES
+	(1,'Sofia'),
+    (2,'Plovdiv'),
+    (3,'Varna');
+    
+INSERT INTO `minions`
+	(`id`,`name`,`age`,`town_id`)
+VALUES
+	(1,'Kevin',22,1),
+    (2,'Bob',15,3),
+    (3,'Steward',NULL,2);
+
+4та задача
+
+TRUNCATE `minions`;
+
+5та задача;
+
+DROP TABLE `minions`;
+DROP TABLE `towns`;
+
+6та задача
+CREATE TABLE `people`(
+`id` INT PRIMARY KEY UNIQUE NOT NULL AUTO_INCREMENT,
+`name` VARCHAR(200) NOT NULL,
+`picture` BLOB,
+`height` DOUBLE (5,2),
+`weight` DOUBLE (5,2),
+`gender` ENUM('m', 'f') NOT NULL,
+`birthdate` DATE NOT NULL,
+`biography` LONGTEXT
+);
+
+INSERT INTO `people` (`name`, picture, height, weight, gender, birthdate, biography)
+VALUES
+('Ivan', '666', 190.66, 90.66, 'm', '1989.02.04', '666'),
+('Ivan', '666', 190.66, 90.66, 'm', '1989.02.04', '666'),
+('Ivan', '666', 190.66, 90.66, 'm', '1989.02.04', '666'),
+('Ivan', '666', 190.66, 90.66, 'm', '1989.02.04', '666'),
+('Ivan', '666', 190.66, 90.66, 'm', '1989.02.04', '666');	
+
+7ма задача
+
+CREATE TABLE `users`(
+`id` INT PRIMARY KEY UNIQUE NOT NULL AUTO_INCREMENT,
+`username` VARCHAR(30) NOT NULL,
+`password` VARCHAR(26) NOT NULL,
+`profile_picture` BLOB,
+`last_login_time` TIMESTAMP,
+`is_deleted` BOOLEAN
+);
+
+INSERT INTO `users` (`username`, password, profile_picture, last_login_time, is_deleted)
+VALUES
+('Ivan', '666', 'snimka', NOW(), TRUE),
+('Ivan', '666', 'snimka', NOW(), FALSE),
+('Ivan', '666', 'snimka', NOW(), TRUE),
+('Ivan', '666', 'snimka', NOW(), FALSE),
+('Ivan', '666', 'snimka', NOW(), TRUE);
+
+8ма задача
+
+ALTER TABLE `users`
+DROP PRIMARY KEY,
+ADD CONSTRAINT `pk_users` PRIMARY KEY (id, username);
+
+9та задача
+
+ALTER TABLE `users`
+MODIFY COLUMN `last_login_time` TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
+
+10та задача
+
+ALTER TABLE `users`
+DROP primary key,
+ADD CONSTRAINT `pk_users` PRIMARY KEY (id),
+ADD CONSTRAINT `username` UNIQUE (username);
+
+11та задача
+CREATE TABLE `directors`(
+`id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+`director_name` VARCHAR(100) NOT NULL,
+`notes` TEXT
+);
+CREATE TABLE `genres`(
+`id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+`genre_name` VARCHAR(100) NOT NULL,
+`notes` TEXT
+);
+CREATE TABLE `categories`(
+`id` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+`category_name` VARCHAR(100) NOT NULL,
+`notes` TEXT
+);
+
+CREATE TABLE `movies`(
+id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+title VARCHAR(100) NOT NULL,
+director_id INT,
+copyright_year DATE,
+length INT,
+genre_id INT,
+category_id INT,
+rating DOUBLE(2, 1),
+notes TEXT
+);
+
+INSERT INTO `directors`(director_name, notes)
+VALUES 
+('Ivan', 'nikakva kreativnost'),
+('Pesho', NULL),
+('Gosho', NULL),
+('Tosho', NULL),
+('Vasil', NULL);
+
+INSERT INTO `genres`(genre_name, notes)
+VALUES 
+('horror', 'nikakva kreativnost'),
+('thriller', NULL),
+('comedy', NULL),
+('drama', NULL),
+('sci-fi', NULL);
+
+INSERT INTO `categories`(category_name, notes)
+VALUES 
+('A', 'nikakva kreativnost'),
+('B', NULL),
+('C', NULL),
+('D', NULL),
+('E', NULL);
+
+INSERT INTO `movies`(title, director_id, copyright_year, length, genre_id, category_id, rating, notes)
+VALUES
+('scary movie', 1, '1995-01-01', 90, 1, 1, 6.6, 'nqma'),
+('scary movie', 1, '1995-01-01', 90, 1, 1, 6.6, 'nqma'),
+('scary movie', 1, '1995-01-01', 90, 1, 1, 6.6, 'nqma'),
+('scary movie', 1, '1995-01-01', 90, 1, 1, 6.6, 'nqma'),
+('scary movie', 1, '1995-01-01', 90, 1, 1, 6.6, 'nqma');
+
+12та задача
+CREATE TABLE `categories`(
+id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+category VARCHAR(20) NOT NULL,
+daily_rate INT,
+weekly_rate INT,
+monthly_rate INT,
+weekend_rate INT
+);
+
+CREATE TABLE `cars`(
+id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+plate_number VARCHAR(20) NOT NULL,
+make VARCHAR(50),
+model VARCHAR(50),
+car_year DATE,
+category_id INT,
+doors INT,
+picture BLOB,
+car_condition TEXT,
+avalaible BOOLEAN
+);
+
+CREATE TABLE `employees`(
+id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+first_name VARCHAR(50) NOT NULL,
+last_name VARCHAR(50) NOT NULL,
+title VARCHAR(50),
+notes TEXT
+);
+
+CREATE TABLE `customers`(
+id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+driver_licence_number INT NOT NULL,
+full_name VARCHAR(100) NOT NULL,
+address VARCHAR(100) NOT NULL,
+city VARCHAR(50),
+zip_code INT,
+notes TEXT
+);
+
+
+
+CREATE TABLE `rental_orders`(
+id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+employee_id INT,
+customer_id INT,
+car_id INT,
+car_condition TEXT,
+tank_level DOUBLE,
+kilometrage_start DOUBLE,
+kilometrage_end DOUBLE,
+total_kilometrage DOUBLE,
+start_date DATE,
+end_date DATE,
+total_days INT,
+rate_applied DOUBLE,
+tax_rate DOUBLE,
+order_status VARCHAR(100),
+notes TEXT
+);
+
+INSERT INTO `categories`(category)
+VALUES
+('A'),
+('B'),
+('C');
+INSERT INTO `cars`(plate_number)
+VALUES
+('111-AAA'),
+('222-BBB'),
+('333-CCC');
+INSERT INTO `employees`(first_name, last_name)
+VALUES
+('PEsho','Ivanov'),
+('Gosho','Ivanov'),
+('Tosho','Ivanov');
+INSERT INTO `customers`(driver_licence_number,full_name,address)
+VALUES
+(111,'PEsho Ivanov','na gaza na geografiqta'),
+(222,'Gosho Ivanov','na gaza na geografiqta'),
+(333,'Tosho Ivanov','na gaza na geografiqta');
+INSERT INTO `rental_orders`(employee_id)
+VALUES
+(111),
+(222),
+(333);
+
+13-задача
+INSERT INTO `towns` 
+		(`name`)
+    VALUES 
+		('Sofia'), ('Plovdiv'), ('Varna'), ('Burgas');
+
+INSERT INTO `departments` 
+		(`name`) 
+	VALUES
+		('Engineering'),
+		('Sales'),
+		('Marketing'),
+		('Software Development'),
+		('Quality Assurance');
+
+INSERT INTO `employees`
+		(`first_name`, `middle_name`, `last_name`, `job_title`, `department_id`, `hire_date`, `salary`)
+	VALUES
+		('Ivan', 'Ivanov', 'Ivanov', '.NET Developer', 4, '2013-02-01', 3500.00),
+		('Petar', 'Petrov', 'Petrov', 'Senior Engineer', 1, '2004-03-02', 4000.00),
+		('Maria', 'Petrova', 'Ivanova', 'Intern', 5, '2016-08-28', 525.25),
+		('Georgi', 'Terziev', 'Ivanov', 'CEO', 2, '2007-12-09', 3000.00),
+		('Peter', 'Pan', 'Pan', 'Intern', 3, '2016-08-28', 599.88);
+		
+14та задача
+
+SELECT * FROM `towns`;
+SELECT * FROM `departments`;
+SELECT * FROM `employees`;
+
+15та задача
+
+SELECT * FROM `towns`
+ORDER BY `name` ASC;
+SELECT * FROM `departments`
+order by `name`;
+SELECT * FROM `employees`
+ORDER BY `salary` DESC;
+
+16та задача
+
+SELECT `name` FROM `towns`
+ORDER BY `name` ASC;
+SELECT `name` FROM `departments`
+order by `name`;
+SELECT first_name, last_name, job_title, salary FROM `employees`
+ORDER BY `salary` DESC;
+
+17задача
+
+UPDATE  employees
+SET salary = 1.1 * salary;
+SELECT salary FROM employees;
+
+18та задача
+TRUNCATE occupancies;		
+
+
+
+  
